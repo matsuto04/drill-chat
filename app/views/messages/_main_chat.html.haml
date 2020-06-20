@@ -1,0 +1,27 @@
+.chat-main
+  .chat-main__top
+    .chat-top__group
+      .chat-top__group--name
+        test
+      .chat-top__group--member
+        Member:
+    .chat-top__edit
+      = link_to "#",class:"chat-top__edit--link" do
+        = "Edit"
+  .chat-main__center
+    .chat-message
+      .chat-message__name
+        .chat-message__name--userName
+          masa
+        .chat-message__name--data
+          2020/6/6
+      .chat-message__comment
+        おはよう
+  .chat-main__bottom
+    %form.Form
+      .Form__contents
+        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
+        %label.Form__inputImage
+          = icon('far', 'image', class: 'Form__icon')
+          %input.Hidden{type: 'file'}
+      %input.Form__submit{type: 'submit', value: 'Send'} 
